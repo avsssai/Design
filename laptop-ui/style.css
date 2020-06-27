@@ -1,0 +1,184 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+header {
+	display: flex;
+	align-items: center;
+	width: 80vw;
+	height: 10vh;
+	margin: auto;
+}
+
+.logo{
+	display: flex;
+	flex:1;
+}
+
+.logo-heading {
+	margin-left: 20px ;
+}
+
+nav{
+	flex: 2;
+}
+
+.nav-links {
+	display: flex;
+}
+
+ul{
+	flex: 1;
+	list-style: none;
+	justify-content: space-evenly;
+}
+
+.presentation{
+	display: flex;
+	align-items: center;
+	width: 80vw;
+	margin: auto;
+}
+
+.intro {
+	flex: 1;
+}
+
+.cta {
+	padding: 30px 0 0 0 ;
+}
+
+.cta1 {
+	padding: 10px;
+	font: inherit;
+	border-color: #c412d1;
+	color: #c412d1;	
+	border: 1px solid;
+	cursor: pointer;
+	width: 150px;
+
+}
+.cta2 {
+	padding: 10px;
+	font: inherit;
+	background-color:#c412d1;
+	color: white;
+	border: none;
+	cursor: pointer;
+	width: 150px;
+}
+.image-show {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	height: 80vh;
+
+}
+.image-show img {
+	height: 100%;
+	/* position: relative;	 */
+	/* width: 40vw; */
+	filter: drop-shadow(0px 5px 3px black);
+	animation: drop 1.5s ease;
+	z-index: 1;
+}
+
+.laptop-select{
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	right: 23%;
+
+}
+
+.big-circle {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	z-index: -1;
+	opacity: 0.4;
+	height: 80%;
+}
+.medium-circle {
+	position: absolute;
+	z-index: -1;
+	top: 30%;
+	right:30%;
+	opacity: 0.6;
+}
+.small-circle {
+	position: absolute;
+	z-index: -1;
+	bottom: 0%;
+	left:20%;
+}
+
+
+@keyframes drop {
+	0%{
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@media screen and (max-width:1024px){
+	
+	.presentation{
+		flex-direction: column;
+	}
+	.intro{
+		margin-top: 5vh;
+		align-items: center;
+	}
+	.image-show{
+		margin-top: 20px;
+		height: 60vh;
+	}
+	.laptop-select{
+		bottom: 5%;
+		right: 50%;
+		width: 50%;
+		transform: translate(50%,5%);
+	}
+	
+}
+
+@media screen and (max-width:500px){
+	nav{
+		font-size: 10px;
+	}
+	nav h3{
+		font-size: 12px;
+	}
+	.logo-heading{
+		margin-left: 2px;
+	}
+	.intro h1 {
+		font-size: 22px;
+	}
+	.intro h4{
+		font-size: 12px;
+		text-align: center;
+	}
+	.cta{
+		display: flex;
+	}
+	.cta1, .cta2 {
+		padding: 10px;
+		width:150px;
+		font-size: 12px;
+	}
+	.image-show {
+		height: 50vh;
+	}
+}
